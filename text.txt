@@ -1,0 +1,1 @@
+Call this function to cause the stream to return strings of the specified encoding instead of Buffer objects. For example, if you do readable.setEncoding('utf8'), then the output data will be interpreted as UTF-8 data, and returned as strings. If you do readable.setEncoding('hex'), then the data will be encoded in hexadecimal string format.
