@@ -20,7 +20,7 @@ var splitStream = es6Stream(function * (read, write) {
       while (++i < len) {
         yield write(chunk[i]);
       }
-    }
+    }\
   })
 var upcaseStream = es6Stream(function* (read, write) {
   var bytes = 1024
@@ -29,4 +29,24 @@ var upcaseStream = es6Stream(function* (read, write) {
     yield write(chunk.toString().toUpperCase())
   }
 })
+```
+
+or use it for readable and writable streams
+
+```js
+co(function *() {
+	var read = es6Stream.read(readableStream);
+	while ((chunk = yield read())) {
+		//do something with chunk;
+	}
+});
+
+co(function *() {
+	var write = es6Stream.write(writableStream);
+	var i = -1;
+	var len = stuff.length;
+	while (++i < len) {
+		yield write(stuff[i]);
+	}
+});
 ```
