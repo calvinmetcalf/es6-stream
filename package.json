@@ -1,6 +1,6 @@
 {
   "name": "es6-stream",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "streams reimagined to use generators",
   "main": "index.js",
   "scripts": {
@@ -25,5 +25,10 @@
   "devDependencies": {
     "tape": "^3.0.0"
   },
-  "keywords":["stream", "generators", "es6", "through"]
+  "keywords": [
+    "stream",
+    "generators",
+    "es6",
+    "through"
+  ]
 }
